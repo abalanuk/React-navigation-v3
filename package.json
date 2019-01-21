@@ -1,6 +1,6 @@
 {
   "name": "test",
-  "version": "0.0.4-bets.0",
+  "version": "0.0.4-beta.0",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start"
