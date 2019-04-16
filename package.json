@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "react-navigation-v3",
   "version": "0.0.4-beta.2",
   "private": true,
   "scripts": {
@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "react": "16.6.1",
-    "react-native": "0.57.7"
+    "react-native": "0.57.7",
+    "react-navigation": "^3.6.1"
   }
 }
