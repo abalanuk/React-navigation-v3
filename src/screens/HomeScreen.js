@@ -1,24 +1,25 @@
 import React, { PureComponent } from "react"
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View, Text, TouchableHighlight} from 'react-native';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333'
-  }
-});
+import sharedStyles from "../sharedStyles";
+
+// const styles = StyleSheet.create({
+// });
+
+const TOUCHABLE_UNDERLAY_COLOR = "lightgrey";
 
 export default class HomeScreen extends PureComponent {
   render() {
     return (
-        <View style={styles.container}>
-          <Text style={styles.instructions}>Home Screen</Text>
+        <View style={sharedStyles.container}>
+          <Text style={sharedStyles.screenTitle}>Home Screen</Text>
+          <TouchableHighlight
+              style={sharedStyles.button}
+              underlayColor={TOUCHABLE_UNDERLAY_COLOR}
+              onPress={() => {}}
+          >
+            <Text>Navigate to ...</Text>
+          </TouchableHighlight>
         </View>
     );
   }
