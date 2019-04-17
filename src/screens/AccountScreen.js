@@ -1,4 +1,4 @@
-import {Component} from "react"
+import {PureComponent} from "react"
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   }
 });
 
-export default class AccountScreen extends Component {
+export default class AccountScreen extends PureComponent {
   render() {
     return (
         <View style={styles.container}>
