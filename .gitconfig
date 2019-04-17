@@ -1,0 +1,32 @@
+[gitflow "branch"]
+	master = master
+	develop = develop
+[gitflow "prefix"]
+	feature = feature/
+	bugfix = bugfix/
+	release = release/
+	hotfix = hotfix/
+	support = support/
+	versiontag = v
+[gitflow "path"]
+	hooks = ./hooks
+[gitflow "feature.finish"]
+  push = TRUE
+  # to have github PRs merged instead of closed we have to remove remote branch manually
+  keepremote = TRUE
+[gitflow "bugfix.finish"]
+  push = TRUE
+  # to have github PRs merged instead of closed we have to remove remote branch manually
+  keepremote = TRUE
+[gitflow "hotfix.start"]
+  fetch = TRUE
+[gitflow "hotfix.finish"]
+  sign = FALSE
+  push = TRUE
+  notag = TRUE
+[gitflow "release.start"]
+  fetch = TRUE
+[gitflow "release.finish"]
+  sign = FALSE
+  push = TRUE
+  notag = TRUE

@@ -7,7 +7,6 @@
  */
 
 import React, {Component} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
 import {createAppContainer, createStackNavigator} from 'react-navigation';
 
 import LoginScreen from "./src/screens/LoginScreen";

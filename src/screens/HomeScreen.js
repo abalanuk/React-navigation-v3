@@ -1,10 +1,24 @@
-import {Component} from "react"
+import {PureComponent} from "react"
+import {StyleSheet} from 'react-native';
 
-export default class HomeScreen extends Component {
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333'
+  }
+});
+
+export default class HomeScreen extends PureComponent {
   render() {
     return (
-        <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-          <Text>Home Screen</Text>
+        <View style={styles.container}>
+          <Text style={styles.instructions}>Home Screen</Text>
         </View>
     );
   }
