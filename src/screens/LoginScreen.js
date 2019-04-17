@@ -1,24 +1,39 @@
-import {PureComponent} from "react"
-import {StyleSheet} from 'react-native';
+import React, { Component } from "react";
+import {
+  StyleSheet,
+  View,
+  Text,
+  TouchableHighlight
+} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333'
-  }
+  screenTitle: {
+    marginVertical: 50,
+  },
+  button: {
+    alignItems: 'center',
+    backgroundColor: 'lightgreen',
+    padding: 10,
+  },
 });
 
-export default class LoginScreen extends PureComponent {
+export default class LoginScreen extends Component {
   render() {
     return (
         <View style={styles.container}>
-          <Text style={styles.instructions}>Login Screen</Text>
+          <Text style={styles.screenTitle}>Login Screen</Text>
+          <TouchableHighlight
+              style={styles.button}
+              underlayColor={"green"}
+              onPress={() => this.props.navigation.navigate("Home")}
+          >
+            <Text> Navigate to Home Screen </Text>
+          </TouchableHighlight>
         </View>
     );
   }

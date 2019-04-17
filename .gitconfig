@@ -23,10 +23,10 @@
 [gitflow "hotfix.finish"]
   sign = FALSE
   push = TRUE
-  notag = TRUE
+  notag = FALSE
 [gitflow "release.start"]
   fetch = TRUE
 [gitflow "release.finish"]
   sign = FALSE
   push = TRUE
-  notag = TRUE
+  notag = FALSE

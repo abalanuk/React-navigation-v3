@@ -1,5 +1,5 @@
-import {PureComponent} from "react"
-import {StyleSheet} from 'react-native';
+import React, { PureComponent } from "react"
+import {StyleSheet, View, Text} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
