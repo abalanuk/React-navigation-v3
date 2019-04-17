@@ -18,7 +18,7 @@ export default class AccountScreen extends Component {
   render() {
     return (
         <View style={styles.container}>
-          <Text>Account Screen</Text>
+          <Text style={styles.instructions}>Account Screen</Text>
         </View>
     );
   }
