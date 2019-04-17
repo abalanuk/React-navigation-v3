@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import {
   StyleSheet,
   View,
@@ -6,31 +6,23 @@ import {
   TouchableHighlight
 } from 'react-native';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  screenTitle: {
-    marginVertical: 50,
-  },
-  button: {
-    alignItems: 'center',
-    backgroundColor: 'lightgreen',
-    padding: 10,
-  },
-});
+import sharedStyles from "../sharedStyles";
 
-export default class LoginScreen extends Component {
+// const styles = StyleSheet.create({
+// });
+
+const TOUCHABLE_UNDERLAY_COLOR = "lightgrey";
+
+export default class LoginScreen extends PureComponent {
   render() {
+    const { navigation: { navigate }} = this.props;
     return (
-        <View style={styles.container}>
-          <Text style={styles.screenTitle}>Login Screen</Text>
+        <View style={sharedStyles.container}>
+          <Text style={sharedStyles.screenTitle}>Login Screen</Text>
           <TouchableHighlight
-              style={styles.button}
-              underlayColor={"green"}
-              onPress={() => this.props.navigation.navigate("Home")}
+              style={sharedStyles.button}
+              underlayColor={TOUCHABLE_UNDERLAY_COLOR}
+              onPress={() => navigate("Home")}
           >
             <Text> Navigate to Home Screen </Text>
           </TouchableHighlight>
